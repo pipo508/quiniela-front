@@ -3,7 +3,7 @@
 # Dependencias
 # La carpeta node_modules contiene todos los paquetes de npm.
 # Se puede regenerar en cualquier momento ejecutando `npm install`.
-/node_modules
+**/node_modules
 
 # Archivos de build y caché de Vite
 # La carpeta /dist es donde Vite pone la versión final de producción de tu app.
@@ -37,3 +37,5 @@ Thumbs.db
 
 # Reportes de cobertura de tests
 /coverage
+
+**/venv
