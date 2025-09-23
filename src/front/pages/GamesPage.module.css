@@ -1,37 +1,42 @@
 /* src/pages/GamesPage.module.css */
-
 .container {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary-light); /* Enlace de regreso en verde claro */
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 .title {
+  font-size: 2.5rem;
+  color: var(--color-accent); /* Título de la página en dorado */
   text-align: center;
   margin-bottom: 2rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  padding: 0 1rem;
 }
 
 .noResults {
   text-align: center;
+  color: var(--color-secondary);
   font-size: 1.2rem;
-  color: #888;
-  margin-top: 3rem;
-}
-
-.backLink {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.backLink:hover {
-  text-decoration: underline;
+  padding: 3rem 1rem;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }

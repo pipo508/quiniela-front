@@ -4,23 +4,37 @@ import React from 'react';
 import GameCard from '../components/GameCard';
 import styles from './HomePage.module.css';
 
+// 1. CORRECCIÓN: Volvemos a separar Nacional y Mendoza
 const juegosDisponibles = [
   {
     id: 'nacional',
+    play_path: '/juego/nacional', // Ruta para agencias de Nacional
     nombre: 'Quiniela Nacional',
-    descripcion: 'Resultados y agencias de la quiniela a nivel nacional.',
+    descripcion: 'Apostá en las agencias de la Quiniela Nacional.',
   },
   {
     id: 'mendoza',
+    play_path: '/juego/mendoza', // Ruta para agencias de Mendoza
     nombre: 'Quiniela de Mendoza',
-    descripcion: 'Resultados y agencias oficiales de la provincia de Mendoza.',
+    descripcion: 'Jugá en las agencias oficiales de la provincia de Mendoza.',
+  },
+  {
+    id: 'quini6',
+    play_path: '/jugar/quini6',
+    nombre: 'Quini 6',
+    descripcion: 'Elegí 6 números y participá por pozos millonarios.',
+  },
+  {
+    id: 'loto',
+    play_path: '/jugar/loto',
+    nombre: 'Loto Plus',
+    descripcion: 'Con 6 números participás en 4 sorteos. ¡Siempre hay un ganador!',
   },
 ];
 
 const HomePage = () => {
   return (
     <div className={styles.pageContainer}>
-      {/* NUEVO: Contenedor para la bienvenida */}
       <header className={styles.header}>
         <h1 className={styles.pageTitle}>Bienvenido a Quiniela App</h1>
         <p className={styles.pageSubtitle}>
@@ -28,14 +42,14 @@ const HomePage = () => {
         </p>
       </header>
       
-      {/* NUEVO: Título para la sección de juegos */}
       <h2 className={styles.gamesSectionTitle}>Nuestros Juegos</h2>
 
       <div className={styles.gamesGrid}>
         {juegosDisponibles.map((juego) => (
           <GameCard
             key={juego.id}
-            id={juego.id}
+            gameId={juego.id}
+            playPath={juego.play_path}
             nombre={juego.nombre}
             descripcion={juego.descripcion}
           />

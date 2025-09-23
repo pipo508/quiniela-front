@@ -1,19 +1,51 @@
 /* src/components/QuinielaCard.module.css */
 .card {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
+  background-color: var(--color-white); /* Fondo blanco para las agencias */
   border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--box-shadow);
+  gap: 0.75rem;
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.nombre { margin: 0 0 0.75rem 0; font-size: 1.25rem; color: var(--color-dark); }
-.detalle { margin: 0.25rem 0; color: var(--color-text); }
-.link { margin-top: auto; text-decoration: none; }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.nombre {
+  font-size: 1.5rem;
+  color: var(--color-primary); /* Nombre de la agencia en verde principal */
+  margin-bottom: 0.5rem;
+}
+
+.detalle {
+  font-size: 1rem;
+  color: var(--color-secondary); /* Detalles en gris oscuro */
+}
+
+.link {
+  margin-top: 1rem;
+  width: 100%;
+}
+
 .button {
-  margin-top: 1rem; width: 100%; padding: 0.75rem; background-color: var(--color-success);
-  color: var(--color-white); border: none; border-radius: 0.5rem; font-size: 1rem;
-  font-weight: var(--font-weight-bold); cursor: pointer; transition: background-color 0.2s;
+  background-color: var(--color-accent); /* Botón en dorado */
+  color: var(--color-dark); /* Texto oscuro */
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
-.button:hover { background-color: #157347; }
+
+.button:hover {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,52 @@
+/* src/pages/Quini6Page.module.css */
+.container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+.header { text-align: center; margin-bottom: 2.5rem; }
+.header h1 { color: var(--color-accent); margin-bottom: 0.5rem; } /* Título en dorado */
+.header p { font-size: 1.1rem; color: var(--color-light); } /* Texto en gris claro */
+
+.card {
+  background-color: var(--color-primary-dark); /* Fondo oscuro del verde principal */
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  border: 1px solid var(--color-primary); /* Borde verde */
+  margin-bottom: 2rem;
+  color: var(--color-white); /* Texto por defecto en blanco dentro de la tarjeta */
+}
+.card h2 { margin-top: 0; border-bottom: 1px solid var(--color-accent); padding-bottom: 1rem; margin-bottom: 1.5rem; color: var(--color-accent); } /* Subtítulos en dorado */
+.numberGrid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 0.75rem;
+}
+.numberButton {
+  font-size: 1.1rem; font-weight: bold; border: 1px solid var(--color-primary-light);
+  background-color: var(--color-dark); /* Fondo oscuro para los botones */
+  color: var(--color-white); /* Texto blanco */
+  border-radius: 50%;
+  width: 50px; height: 50px; cursor: pointer; transition: all 0.2s;
+}
+.numberButton:hover { border-color: var(--color-accent); color: var(--color-accent); } /* Dorado al pasar el ratón */
+.numberButton:disabled { opacity: 0.5; cursor: not-allowed; }
+.numberButton.selected {
+  background-color: var(--color-accent); /* Seleccionado en dorado */
+  color: var(--color-dark); /* Texto oscuro en el botón dorado */
+  border-color: var(--color-accent-dark);
+}
+.selectionDisplay { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; min-height: 40px; }
+.selectedNumber {
+  background-color: var(--color-accent-dark); /* Número seleccionado en dorado oscuro */
+  color: var(--color-dark); font-weight: bold;
+  padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem;
+}
+.emptySelection { color: var(--color-light); } /* Texto en gris claro */
+.options { display: flex; flex-direction: column; gap: 1rem; }
+.checkboxContainer { font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; color: var(--color-white); } /* Texto en blanco */
+.checkboxContainer input { width: 20px; height: 20px; }
+.submitButton {
+  width: 100%; padding: 1rem; font-size: 1.2rem; font-weight: bold;
+  background: var(--color-accent); /* Botón de confirmar en dorado */
+  color: var(--color-dark); /* Texto oscuro */
+  border: none;
+  border-radius: 0.5rem; cursor: pointer; transition: all 0.2s;
+}
+.submitButton:hover { background-color: var(--color-accent-dark); }
+.submitButton:disabled { background-color: var(--color-secondary); color: var(--color-light); cursor: not-allowed; } /* Deshabilitado en gris */

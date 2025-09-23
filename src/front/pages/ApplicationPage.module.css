@@ -1,0 +1,108 @@
+/* src/pages/ApplicationPage.module.css */
+
+.applicationPage {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.applicationContainer {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 2rem 2.5rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--color-primary);
+}
+
+.applicationTitle {
+  color: var(--color-accent);
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.applicationSubtitle {
+  color: var(--color-light);
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.applicationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: var(--color-light);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-primary-light);
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+}
+
+.formGroup input.error,
+.formGroup textarea.error {
+  border-color: var(--color-danger);
+}
+
+.errorMessage {
+  color: #ffcdd2; /* Un rojo claro para que se vea bien en fondo oscuro */
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.fileHelp {
+  color: var(--color-light);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+.submitButton {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: var(--color-accent-dark);
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  background: var(--color-secondary);
+  color: var(--color-light);
+  cursor: not-allowed;
+}

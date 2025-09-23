@@ -1,0 +1,38 @@
+/* src/pages/AdminDashboard.module.css */
+.dashboardContainer { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+.header { text-align: center; margin-bottom: 2.5rem; }
+.header h1 { margin-bottom: 0.5rem; }
+.header p { font-size: 1.1rem; color: var(--color-light); }
+.card {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white); border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow); padding: 2rem;
+  border: 1px solid var(--color-primary);
+}
+.card h2 {
+  margin-top: 0; border-bottom: 1px solid var(--color-primary-light);
+  padding-bottom: 1rem; margin-bottom: 1.5rem;
+}
+.solicitudesList { list-style: none; padding: 0; margin: 0; }
+.solicitudItem {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem; border-bottom: 1px solid var(--color-primary);
+  flex-wrap: wrap; gap: 1rem;
+}
+.solicitudItem:last-child { border-bottom: none; }
+.solicitudInfo { display: flex; flex-direction: column; gap: 0.25rem; }
+.solicitudInfo strong { font-size: 1.1rem; color: var(--color-accent); }
+.solicitudInfo span { color: var(--color-light); }
+.solicitudActions { display: flex; gap: 0.75rem; }
+.button {
+  border: none; padding: 0.5rem 1rem; border-radius: 0.5rem;
+  font-weight: bold; cursor: pointer; transition: all 0.2s;
+  color: var(--color-white);
+}
+.approveButton { background-color: var(--color-success); }
+.rejectButton { background-color: var(--color-danger); }
+.noSolicitudes {
+  text-align: center; color: var(--color-light); padding: 2rem;
+  background-color: var(--color-dark); border-radius: 0.5rem;
+}
+.error { color: #ffcdd2; }

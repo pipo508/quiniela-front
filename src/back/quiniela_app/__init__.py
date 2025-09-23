@@ -33,8 +33,7 @@ def create_app(config_class=Config):
 
     # Registrar Blueprints (grupos de rutas)
     from quiniela_app.routes.public import bp_public
-    app.register_blueprint(bp_public, url_prefix='/api')
-
+    app.register_blueprint(bp_public, url_prefix='/api/public')
     from quiniela_app.routes.admin import bp_admin
     app.register_blueprint(bp_admin, url_prefix='/api/admin')
     
