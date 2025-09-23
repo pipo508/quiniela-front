@@ -107,8 +107,8 @@
 .button:focus {
   outline: none;
   ring: 2px solid #3b82f6;
-  ring-opacity: 0.5;
-  ring-offset: 2px;
+  fill-opacity: 0.5;
+  motion-offset: 2px;
 }
 
 /* Responsive Design */
