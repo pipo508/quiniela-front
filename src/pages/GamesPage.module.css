@@ -1,0 +1,37 @@
+/* src/pages/GamesPage.module.css */
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.noResults {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 3rem;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}

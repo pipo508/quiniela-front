@@ -1,0 +1,28 @@
+/* src/components/GameCard.module.css */
+.card {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid var(--color-border);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.title { margin-top: 0; color: var(--color-dark); }
+.description { flex-grow: 1; color: var(--color-text); line-height: 1.6; }
+.buttonGroup { margin-top: 1rem; display: flex; gap: 0.5rem; }
+.link { text-decoration: none; flex-grow: 1; }
+.buttonPrimary, .buttonSecondary {
+  width: 100%; border: none; padding: 0.75rem 1rem; border-radius: 0.5rem;
+  cursor: pointer; font-size: 0.9rem; font-weight: var(--font-weight-bold); transition: background-color 0.2s;
+}
+.buttonPrimary { background-color: var(--color-primary); color: var(--color-white); }
+.buttonPrimary:hover { background-color: var(--color-primary-dark); }
+.buttonSecondary { background-color: var(--color-secondary); color: var(--color-white); }
+.buttonSecondary:hover { background-color: var(--color-dark); }

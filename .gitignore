@@ -1,0 +1,39 @@
+# Creado por Gemini para un proyecto de Vite + React
+
+# Dependencias
+# La carpeta node_modules contiene todos los paquetes de npm.
+# Se puede regenerar en cualquier momento ejecutando `npm install`.
+/node_modules
+
+# Archivos de build y caché de Vite
+# La carpeta /dist es donde Vite pone la versión final de producción de tu app.
+# La carpeta .vite es para la caché del servidor de desarrollo.
+/dist
+/.vite
+
+# Logs
+# Archivos de registro generados por npm, yarn o pnpm.
+npm-debug.log*
+yarn-error.log
+yarn-debug.log
+pnpm-debug.log
+
+# Variables de entorno
+# ¡MUY IMPORTANTE! Estos archivos contienen secretos y claves de API.
+# Nunca deben subirse a un repositorio público.
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Archivos de configuración de editores de código
+.vscode/
+.idea/
+
+# Archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Reportes de cobertura de tests
+/coverage

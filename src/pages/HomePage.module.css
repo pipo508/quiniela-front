@@ -1,0 +1,26 @@
+/* src/pages/HomePage.module.css */
+
+.pageContainer {
+  padding: 20px;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.pageSubtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+}
+
+.gamesGrid {
+  display: grid;
+  /* Crea 2 columnas en pantallas grandes, y 1 en pantallas pequeñas */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Espacio entre las tarjetas */
+}
