@@ -1,51 +1,98 @@
 /* src/components/QuinielaCard.module.css */
 .card {
-  background-color: var(--color-white); /* Fondo blanco para las agencias */
+  background-color: var(--color-primary-dark); /* Fondo oscuro del verde principal */
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  padding: 1.5rem;
+  padding: 2rem;
+  border: 1px solid var(--color-primary); /* Borde verde */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--color-white); /* Texto por defecto en blanco */
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  border: 1px solid var(--color-border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: space-between;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.agencyInfo {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
 }
 
 .nombre {
-  font-size: 1.5rem;
-  color: var(--color-primary); /* Nombre de la agencia en verde principal */
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--color-accent); /* Nombre de la agencia en dorado */
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-accent);
+  padding-bottom: 0.5rem;
 }
 
 .detalle {
   font-size: 1rem;
-  color: var(--color-secondary); /* Detalles en gris oscuro */
+  color: var(--color-light); /* Detalles en gris claro */
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.availableGames {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-primary);
+}
+
+.availableGames strong {
+  color: var(--color-white);
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.gamesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gameTag {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--color-primary-light);
+}
+
+.agencyActions {
+  display: flex;
+  gap: 1rem;
 }
 
 .link {
-  margin-top: 1rem;
   width: 100%;
+  text-decoration: none;
 }
 
 .button {
   background-color: var(--color-accent); /* Botón en dorado */
   color: var(--color-dark); /* Texto oscuro */
   border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
   width: 100%;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  transition: all 0.3s ease;
 }
 
 .button:hover {
   background-color: var(--color-accent-dark);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }

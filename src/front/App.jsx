@@ -15,6 +15,8 @@ import AdminDashboard from './pages/AdminDashboard';
 import Quini6Page from './pages/Quini6Page';
 import LotoPage from './pages/LotoPage';
 import AllResultsPage from './pages/AllResultsPage'; // 👈 Importa la nueva página
+import Quini6AgenciesPage from './pages/Quini6AgenciesPage';
+import LotoAgenciesPage from './pages/LotoAgenciesPage';
 // Estilos
 import './App.css';
 
@@ -35,6 +37,8 @@ function App() {
           <Route path="/jugar/quini6" element={<Quini6Page />} />
           <Route path="/jugar/loto" element={<LotoPage />} />
           <Route path="/resultados" element={<AllResultsPage />} /> {/* 👈 Añade */}
+          <Route path="/agencias/quini6" element={<Quini6AgenciesPage />} />
+          <Route path="/agencias/loto" element={<LotoAgenciesPage />} />
 
 
         </Routes>

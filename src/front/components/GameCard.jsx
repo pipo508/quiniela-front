@@ -1,15 +1,43 @@
 // src/components/GameCard.jsx
 
 import React from 'react';
-// 1. Importa 'useNavigate' en lugar de 'Link'
 import { useNavigate } from 'react-router-dom';
 import styles from './GameCard.module.css';
 
 const GameCard = ({ gameId, playPath, nombre, descripcion }) => {
-  // 2. Obtén la función de navegación
   const navigate = useNavigate();
 
-  const primaryButtonText = gameId === 'quiniela' ? 'Ver Agencias' : 'Jugar Ahora';
+  // Función para manejar el click del botón principal
+  const handlePrimaryButtonClick = () => {
+    switch (gameId) {
+      case 'quiniela':
+        navigate('/agencias/quiniela'); // Va a ver agencias de quiniela
+        break;
+      case 'quini6':
+        navigate('/agencias/quini6'); // Va a ver agencias de quini6
+        break;
+      case 'loto':
+        navigate('/agencias/loto'); // Va a ver agencias de loto
+        break;
+      default:
+        navigate(playPath); // Fallback al comportamiento original
+    }
+  };
+
+  // Función para manejar resultados
+  const handleResultsClick = () => {
+    switch (gameId) {
+      case 'quiniela':
+        navigate('/resultados/nacional');
+        break;
+      case 'quini6':
+        navigate('/resultados/quini6');
+        break;
+      case 'loto':
+        navigate('/resultados/loto');
+        break;
+    }
+  };
 
   return (
     <div className={styles.card}>
@@ -18,22 +46,19 @@ const GameCard = ({ gameId, playPath, nombre, descripcion }) => {
         <p className={styles.description}>{descripcion}</p>
       </div>
       <div className={styles.buttonGroup}>
-        {/* 3. Elimina el <Link> y usa un onClick en el botón */}
         <button 
           className={styles.buttonPrimary}
-          onClick={() => navigate(playPath)}
+          onClick={handlePrimaryButtonClick}
         >
-          {primaryButtonText}
+          Ver Agencias
         </button>
 
-        {gameId === 'quiniela' && (
-          <button 
-            className={styles.buttonSecondary}
-            onClick={() => navigate(`/resultados/nacional`)}
-          >
-            Ver Resultados
-          </button>
-        )}
+        <button 
+          className={styles.buttonSecondary}
+          onClick={handleResultsClick}
+        >
+          Ver Resultados
+        </button>
       </div>
     </div>
   );

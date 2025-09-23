@@ -1,0 +1,237 @@
+/* src/pages/AgenciesPage.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  min-height: 100vh;
+}
+
+.backLink {
+  display: inline-block;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--color-accent-dark);
+  text-decoration: underline;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header h1 {
+  color: var(--color-accent);
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+}
+
+.header p {
+  color: var(--color-light);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.agenciesList {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.agencyCard {
+  background-color: var(--color-primary-dark);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  border: 1px solid var(--color-primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-white);
+}
+
+.agencyCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.agencyInfo {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.agencyName {
+  color: var(--color-accent);
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-accent);
+  padding-bottom: 0.5rem;
+}
+
+.agencyLocation,
+.agencyPhone {
+  color: var(--color-light);
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.availableGames {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-primary);
+}
+
+.availableGames strong {
+  color: var(--color-white);
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.gamesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gameTag {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--color-primary-light);
+}
+
+.agencyActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.playButton {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+  flex: 1;
+  display: block;
+  font-size: 1.1rem;
+}
+
+.playButton:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.noAgencies {
+  text-align: center;
+  background-color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  grid-column: 1 / -1;
+  color: var(--color-white);
+}
+
+.noAgencies p {
+  color: var(--color-light);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .agenciesList {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .agencyCard {
+    padding: 1.5rem;
+  }
+  
+  .playButton {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+  }
+}yButton {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+  flex: 1;
+  display: block;
+}
+
+.playButton:hover {
+  background: linear-gradient(135deg, #218838, #1ea085);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: white;
+}
+
+.noAgencies {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  grid-column: 1 / -1;
+}
+
+.noAgencies p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .agenciesList {
+    grid-template-columns: 1fr;
+  }
+  
+  .agencyCard {
+    padding: 20px;
+  }
+}

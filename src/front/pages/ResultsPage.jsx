@@ -1,7 +1,7 @@
 // src/pages/ResultsPage.jsx
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { resultados } from "../data/mockResults";
+import { mockResults } from "../data/mockResults";
 import DrawResult from '../components/DrawResult';
 import styles from './ResultsPage.module.css';
 

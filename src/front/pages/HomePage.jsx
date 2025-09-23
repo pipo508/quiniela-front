@@ -4,35 +4,35 @@ import React from 'react';
 import GameCard from '../components/GameCard';
 import styles from './HomePage.module.css';
 
-// 1. CORRECCIÓN: Volvemos a separar Nacional y Mendoza
 const juegosDisponibles = [
   {
     id: 'nacional',
-    play_path: '/juego/nacional', // Ruta para agencias de Nacional
+    play_path: '/juego/nacional', // Esto ya está correcto
     nombre: 'Quiniela Nacional',
     descripcion: 'Apostá en las agencias de la Quiniela Nacional.',
   },
   {
     id: 'mendoza',
-    play_path: '/juego/mendoza', // Ruta para agencias de Mendoza
+    play_path: '/juego/mendoza', // Esto ya está correcto
     nombre: 'Quiniela de Mendoza',
     descripcion: 'Jugá en las agencias oficiales de la provincia de Mendoza.',
   },
   {
     id: 'quini6',
-    play_path: '/jugar/quini6',
+    play_path: '/juego/quini6', // 👈 CORRECCIÓN: Ahora pasa por la lista de agencias
     nombre: 'Quini 6',
     descripcion: 'Elegí 6 números y participá por pozos millonarios.',
   },
   {
     id: 'loto',
-    play_path: '/jugar/loto',
+    play_path: '/juego/loto', // 👈 CORRECCIÓN: Ahora pasa por la lista de agencias
     nombre: 'Loto Plus',
     descripcion: 'Con 6 números participás en 4 sorteos. ¡Siempre hay un ganador!',
   },
 ];
 
 const HomePage = () => {
+  // ... el resto del componente no necesita cambios ...
   return (
     <div className={styles.pageContainer}>
       <header className={styles.header}>
