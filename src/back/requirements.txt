@@ -1,0 +1,12 @@
+# requirements.txt
+# Lista de dependencias de Python.
+
+Flask
+python-dotenv
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Marshmallow
+marshmallow-sqlalchemy
+Flask-JWT-Extended
+Flask-Mail
+Flask-Cors
