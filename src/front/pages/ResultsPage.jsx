@@ -7,7 +7,7 @@ import styles from './ResultsPage.module.css';
 
 const ResultsPage = () => {
   const { gameId } = useParams();
-  const data = resultados[gameId];
+  const data = mockResults[gameId]; // Corregido: usar mockResults
 
   if (!data) {
     return (
@@ -23,11 +23,11 @@ const ResultsPage = () => {
   return (
     <div className={styles.container}>
       <Link to="/" className={styles.backLink}>&larr; Volver a los juegos</Link>
-      <h1 className={styles.title}>Resultados Quiniela {nombreJuego}</h1>
+      <h1 className={styles.title}>Resultados {data.nombre}</h1>
       <p className={styles.subtitle}>Sorteos del día {data.fecha}</p>
       
       <div>
-        {data.sorteos.map(sorteo => (
+        {data.sorteos && data.sorteos.map(sorteo => (
           <DrawResult key={sorteo.titulo} sorteo={sorteo} />
         ))}
       </div>

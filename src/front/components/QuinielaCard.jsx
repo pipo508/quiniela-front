@@ -14,6 +14,12 @@ const QuinielaCard = ({ id, nombre, ubicacion, telefono, gameId, games = [] }) =
   } else if (gameId === 'loto') {
     destinationPath = '/jugar/loto';
     buttonText = 'Jugar Loto Plus';
+  } else if (gameId === 'nacional') {
+    destinationPath = `/quiniela/${id}`; // Directo a la página de quiniela específica
+    buttonText = 'Jugar Quiniela Nacional';
+  } else if (gameId === 'mendoza') {
+    destinationPath = `/quiniela/${id}`; // Directo a la página de quiniela específica
+    buttonText = 'Jugar Quiniela de Mendoza';
   } else {
     destinationPath = `/quiniela/${id}`;
     buttonText = 'Jugar Quiniela';

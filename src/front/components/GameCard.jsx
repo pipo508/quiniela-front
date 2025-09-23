@@ -10,32 +10,40 @@ const GameCard = ({ gameId, playPath, nombre, descripcion }) => {
   // Función para manejar el click del botón principal
   const handlePrimaryButtonClick = () => {
     switch (gameId) {
-      case 'quiniela':
-        navigate('/agencias/quiniela'); // Va a ver agencias de quiniela
+      case 'nacional':
+        navigate('/agencias/nacional'); // Agencias específicas de nacional
+        break;
+      case 'mendoza':
+        navigate('/agencias/mendoza'); // Agencias específicas de mendoza
         break;
       case 'quini6':
-        navigate('/agencias/quini6'); // Va a ver agencias de quini6
+        navigate('/agencias/quini6');
         break;
       case 'loto':
-        navigate('/agencias/loto'); // Va a ver agencias de loto
+        navigate('/agencias/loto');
         break;
       default:
-        navigate(playPath); // Fallback al comportamiento original
+        navigate(playPath);
     }
   };
 
   // Función para manejar resultados
   const handleResultsClick = () => {
     switch (gameId) {
-      case 'quiniela':
-        navigate('/resultados/nacional');
+      case 'nacional':
+        navigate('/resultados?filtro=quiniela-nacional');
+        break;
+      case 'mendoza':
+        navigate('/resultados?filtro=quiniela-mendoza');
         break;
       case 'quini6':
-        navigate('/resultados/quini6');
+        navigate('/resultados?filtro=quini6');
         break;
       case 'loto':
-        navigate('/resultados/loto');
+        navigate('/resultados?filtro=loto');
         break;
+      default:
+        navigate('/resultados');
     }
   };
 

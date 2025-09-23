@@ -7,32 +7,31 @@ import styles from './HomePage.module.css';
 const juegosDisponibles = [
   {
     id: 'nacional',
-    play_path: '/juego/nacional', // Esto ya está correcto
+    play_path: '/juego/nacional',
     nombre: 'Quiniela Nacional',
     descripcion: 'Apostá en las agencias de la Quiniela Nacional.',
   },
   {
     id: 'mendoza',
-    play_path: '/juego/mendoza', // Esto ya está correcto
+    play_path: '/juego/mendoza',
     nombre: 'Quiniela de Mendoza',
     descripcion: 'Jugá en las agencias oficiales de la provincia de Mendoza.',
   },
   {
     id: 'quini6',
-    play_path: '/juego/quini6', // 👈 CORRECCIÓN: Ahora pasa por la lista de agencias
+    play_path: '/juego/quini6',
     nombre: 'Quini 6',
     descripcion: 'Elegí 6 números y participá por pozos millonarios.',
   },
   {
     id: 'loto',
-    play_path: '/juego/loto', // 👈 CORRECCIÓN: Ahora pasa por la lista de agencias
+    play_path: '/juego/loto',
     nombre: 'Loto Plus',
     descripcion: 'Con 6 números participás en 4 sorteos. ¡Siempre hay un ganador!',
   },
 ];
 
 const HomePage = () => {
-  // ... el resto del componente no necesita cambios ...
   return (
     <div className={styles.pageContainer}>
       <header className={styles.header}>
