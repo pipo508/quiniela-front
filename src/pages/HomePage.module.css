@@ -1,26 +1,128 @@
 /* src/pages/HomePage.module.css */
 
 .pageContainer {
-  padding: 20px;
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header minimalista y elegante */
+.header {
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  margin-bottom: 5rem;
+  background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%);
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto sutil de fondo */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary, #3b82f6), transparent, var(--color-primary, #3b82f6));
 }
 
 .pageTitle {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 10px;
+  font-size: clamp(2.75rem, 6vw, 4rem);
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
 }
 
 .pageSubtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #7f8c8d;
-  margin-bottom: 40px;
+  font-size: 1.125rem;
+  color: #64748b;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
+/* Título de sección limpio y profesional */
+.gamesSectionTitle {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 3rem;
+  position: relative;
+  letter-spacing: -0.015em;
+}
+
+/* Línea decorativa más sutil */
+.gamesSectionTitle::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary, #3b82f6), var(--color-primary-dark, #2563eb));
+  margin: 0.75rem auto 0;
+  border-radius: 1px;
+}
+
+/* Grid responsivo y equilibrado */
 .gamesGrid {
   display: grid;
-  /* Crea 2 columnas en pantallas grandes, y 1 en pantallas pequeñas */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px; /* Espacio entre las tarjetas */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  flex: 1;
+  align-content: start;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 1rem;
+  }
+  
+  .header {
+    padding: 3rem 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    border-radius: 12px;
+  }
+  
+  .pageTitle {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+  }
+  
+  .pageSubtitle {
+    font-size: 1rem;
+  }
+  
+  .gamesSectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .gamesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageContainer {
+    padding: 0.75rem;
+  }
+  
+  .header {
+    padding: 2.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .gamesGrid {
+    gap: 1rem;
+  }
 }

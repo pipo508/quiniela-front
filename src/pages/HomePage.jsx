@@ -1,10 +1,9 @@
 // src/pages/HomePage.jsx
 
 import React from 'react';
-import GameCard from '../components/GameCard'; // Importamos nuestro nuevo componente
-import styles from './HomePage.module.css'; // Importamos los estilos de la página
+import GameCard from '../components/GameCard';
+import styles from './HomePage.module.css';
 
-// Más adelante, estos datos vendrán de tu API. Por ahora, los simulamos aquí.
 const juegosDisponibles = [
   {
     id: 'nacional',
@@ -21,14 +20,21 @@ const juegosDisponibles = [
 const HomePage = () => {
   return (
     <div className={styles.pageContainer}>
-      <h1 className={styles.pageTitle}>Bienvenido a Quiniela App</h1>
-      <p className={styles.pageSubtitle}>Selecciona un juego para ver las agencias disponibles y realizar tu apuesta.</p>
+      {/* NUEVO: Contenedor para la bienvenida */}
+      <header className={styles.header}>
+        <h1 className={styles.pageTitle}>Bienvenido a Quiniela App</h1>
+        <p className={styles.pageSubtitle}>
+          Selecciona un juego para ver las agencias disponibles, consultar los últimos resultados y realizar tu apuesta de forma rápida y segura.
+        </p>
+      </header>
       
+      {/* NUEVO: Título para la sección de juegos */}
+      <h2 className={styles.gamesSectionTitle}>Nuestros Juegos</h2>
+
       <div className={styles.gamesGrid}>
-        {/* Usamos .map() para crear un componente GameCard por cada juego en nuestra lista */}
         {juegosDisponibles.map((juego) => (
           <GameCard
-            key={juego.id} // "key" es importante para React en las listas
+            key={juego.id}
             id={juego.id}
             nombre={juego.nombre}
             descripcion={juego.descripcion}
