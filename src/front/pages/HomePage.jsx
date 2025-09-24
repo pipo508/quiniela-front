@@ -2,6 +2,8 @@
 
 import React from 'react';
 import GameCard from '../components/GameCard';
+import BannerLateral from '../components/BannerLateral';
+import BannerInferior from '../components/BannerInferior';
 import styles from './HomePage.module.css';
 
 const juegosDisponibles = [
@@ -40,7 +42,7 @@ const HomePage = () => {
           Selecciona un juego para ver las agencias disponibles, consultar los últimos resultados y realizar tu apuesta de forma rápida y segura.
         </p>
       </header>
-      
+
       <h2 className={styles.gamesSectionTitle}>Nuestros Juegos</h2>
 
       <div className={styles.gamesGrid}>
@@ -54,6 +56,11 @@ const HomePage = () => {
           />
         ))}
       </div>
+
+      {/* Banners publicitarios */}
+      <BannerLateral position="left" interval={30000} />
+      <BannerLateral position="right" interval={35000} />
+      <BannerInferior interval={45000} />
     </div>
   );
 };
