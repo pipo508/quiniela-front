@@ -36,3 +36,22 @@
   background-color: var(--color-dark); border-radius: 0.5rem;
 }
 .error { color: #ffcdd2; }
+.adminNav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 1rem;
+}
+.navLink {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+.navLink:hover {
+  background-color: var(--color-primary-light);
+}

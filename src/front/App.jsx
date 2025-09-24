@@ -19,6 +19,7 @@ import Quini6AgenciesPage from './pages/Quini6AgenciesPage';
 import LotoAgenciesPage from './pages/LotoAgenciesPage';
 import NacionalAgenciesPage from './pages/NacionalAgenciesPage'; // 👈 Agregado
 import MendozaAgenciesPage from './pages/MendozaAgenciesPage'; // 👈 Agregado
+import AdminBetsPage from './pages/AdminBetsPage';
 
 // Estilos
 import './App.css';
@@ -46,6 +47,8 @@ function App() {
           <Route path="/agencias/mendoza" element={<MendozaAgenciesPage />} /> {/* 👈 Agregado */}
           <Route path="/agencias/quini6" element={<Quini6AgenciesPage />} />
           <Route path="/agencias/loto" element={<LotoAgenciesPage />} />
+          <Route path="/admin/apuestas" element={<AdminBetsPage />} />
+
         </Routes>
       </main>
     </BrowserRouter>
