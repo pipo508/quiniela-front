@@ -43,6 +43,7 @@
   justify-content: center;
   transition: all 0.3s ease;
   z-index: 10;
+  font-family: 'Inter', sans-serif; font-weight: 700;
 }
 
 .closeButton:hover {
@@ -68,6 +69,7 @@
   font-weight: bold;
   margin: 0 0 8px 0;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: -0.01em;
 }
 
 .subtitle {
@@ -76,6 +78,7 @@
   margin: 0 0 8px 0;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   letter-spacing: 1px;
+  font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em;
 }
 
 .description {
@@ -83,6 +86,7 @@
   margin: 0 0 20px 0;
   opacity: 0.9;
   line-height: 1.4;
+  font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.01em;
 }
 
 .ctaButton {
@@ -96,6 +100,7 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
+  font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em;
 }
 
 .ctaButton:hover {
@@ -197,19 +202,23 @@
 
   .title {
     font-size: 1.2rem;
+    font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: -0.01em;
   }
 
   .subtitle {
     font-size: 1.5rem;
+    font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em;
   }
 
   .description {
     font-size: 0.9rem;
+    font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.01em;
   }
 
   .ctaButton {
     padding: 10px 20px;
     font-size: 0.9rem;
+    font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em;
   }
 }
 

@@ -10,20 +10,22 @@
   margin-bottom: 2.5rem;
   border: 1px solid var(--color-primary);
 }
-.detailsCard h1 { margin: 0; font-size: 2rem; }
-.detailsCard p { margin: 0.5rem 0 0; color: var(--color-light); font-size: 1.1rem; }
+.detailsCard h1 { margin: 0; font-size: 2rem; font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+.detailsCard p { margin: 0.5rem 0 0; color: var(--color-light); font-size: 1.1rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.01em; }
 .formCard h2, .ticketCard h2 {
   margin-top: 0; font-size: 1.5rem;
   border-bottom: 1px solid var(--color-primary-light);
   padding-bottom: 1rem; margin-bottom: 1.5rem;
+  font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em;
 }
 .addBetRow { display: flex; align-items: flex-end; gap: 1rem; flex-wrap: wrap; }
 .addBetRow .inputGroup { flex-grow: 1; min-width: 120px; }
-.inputGroup label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-light); font-size: 0.9rem; }
+.inputGroup label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-light); font-size: 0.9rem; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em; }
 .inputGroup input, .select {
   width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--color-primary-light);
   border-radius: 0.5rem; font-size: 1rem; background-color: var(--color-dark);
   color: var(--color-white); transition: all 0.2s;
+  font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.01em;
 }
 .inputGroup input:focus, .select:focus {
   outline: none; border-color: var(--color-accent);
@@ -33,6 +35,7 @@
   padding: 0.8rem 1.5rem; background: var(--color-accent); color: var(--color-dark);
   border: none; border-radius: 0.5rem; cursor: pointer; font-weight: bold;
   flex-shrink: 0; transition: all 0.2s;
+  font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em;
 }
 .addButton:hover { background-color: var(--color-accent-dark); }
 .emptyTicket {
@@ -46,7 +49,7 @@
 }
 .betItem:last-child { border-bottom: none; }
 .betInfo { display: flex; flex-direction: column; gap: 0.25rem; }
-.betInfo small { color: var(--color-light); }
+.betInfo small { color: var(--color-light); font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.01em; }
 .betPrize { text-align: right; }
 .betPrize span { color: var(--color-accent); }
 .deleteButton {
@@ -62,9 +65,9 @@
   justify-content: space-between; align-items: center;
 }
 .summaryCost { background-color: rgba(0,0,0,0.2); color: var(--color-light); }
-.summaryCost strong { font-size: 1.3rem; color: var(--color-white); }
+.summaryCost strong { font-size: 1.3rem; color: var(--color-white); font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em; }
 .summaryPrize { background-color: #00251a; color: var(--color-accent-dark); border: 1px solid var(--color-accent); }
-.summaryPrize strong { font-size: 1.5rem; color: var(--color-accent); }
+.summaryPrize strong { font-size: 1.5rem; color: var(--color-accent); font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
 .statusSuccess, .statusError { padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; text-align: center; }
 .statusSuccess { background-color: #d1e7dd; color: #0f5132; }
 .statusError { background-color: #f8d7da; color: #842029; }
@@ -72,5 +75,6 @@
   width: 100%; padding: 1rem; margin-top: 1rem; font-size: 1.2rem;
   font-weight: bold; background: var(--color-accent); color: var(--color-dark);
   border: none; border-radius: 0.5rem; cursor: pointer;
+  font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em;
 }
 .confirmButton:disabled { background-color: var(--color-secondary); cursor: not-allowed; }

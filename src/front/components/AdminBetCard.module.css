@@ -4,17 +4,17 @@
 .card.cargado { border-color: var(--color-success); }
 .card.rechazado { border-color: var(--color-danger); }
 .header { display: flex; justify-content: space-between; align-items: center; background-color: var(--color-dark); padding: 1rem 1.5rem; }
-.header h3 { margin: 0; color: var(--color-accent); font-size: 1.2rem; }
-.statusBadge { padding: 0.25rem 0.75rem; border-radius: 2rem; font-weight: bold; color: var(--color-dark); }
+.header h3 { margin: 0; color: var(--color-accent); font-size: 1.2rem; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em; }
+.statusBadge { padding: 0.25rem 0.75rem; border-radius: 2rem; font-weight: bold; color: var(--color-dark); font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em; }
 .statusBadge.pendiente { background-color: var(--color-warning); }
 .statusBadge.cargado { background-color: var(--color-success); color: var(--color-white); }
 .statusBadge.rechazado { background-color: var(--color-danger); color: var(--color-white); }
 .content { padding: 1.5rem; }
-.content p { margin: 0 0 0.5rem 0; }
+.content p { margin: 0 0 0.5rem 0; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.01em; }
 .details { margin-top: 1rem; }
 .details ul { list-style: circle; padding-left: 20px; }
-.poceadoNumbers { font-weight: bold; font-size: 1.2rem; color: var(--color-accent); letter-spacing: 2px; }
+.poceadoNumbers { font-weight: bold; font-size: 1.2rem; color: var(--color-accent); letter-spacing: 2px; font-family: 'Inter', sans-serif; font-weight: 700; }
 .actions { display: flex; gap: 1rem; padding: 0 1.5rem 1.5rem; }
-.button { border: none; padding: 0.6rem 1.2rem; border-radius: 0.5rem; font-weight: bold; cursor: pointer; }
+.button { border: none; padding: 0.6rem 1.2rem; border-radius: 0.5rem; font-weight: bold; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em; }
 .approve { background-color: var(--color-success); color: var(--color-white); }
 .reject { background-color: var(--color-danger); color: var(--color-white); }
