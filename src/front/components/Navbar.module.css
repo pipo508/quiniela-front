@@ -1,7 +1,7 @@
 /* src/components/Navbar.module.css */
 .navbar {
   background-color: var(--color-primary-dark);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid var(--color-accent);
   position: sticky;
@@ -24,6 +24,12 @@
   font-weight: bold;
   text-decoration: none;
   z-index: 10; /* Para que esté por encima del menú móvil */
+}
+
+.logo {
+  height: 78px;
+  width: auto;
+  object-fit: contain;
 }
 
 .navList {

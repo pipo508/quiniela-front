@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         <NavLink to="/" className={styles.navbarBrand} onClick={() => setMenuOpen(false)}>
-          Quiniela App
+          <img src="/assets/logo.png" alt="Quiniela App" className={styles.logo} />
         </NavLink>
         
         {/* Botón de menú hamburguesa para móviles */}
